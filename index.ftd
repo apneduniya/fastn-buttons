@@ -1,40 +1,57 @@
--- ds.page: Welcome to doc-site
+-- import: fifthtry.github.io/button as button
 
 
-⚡️ `doc-site` will help you create a beautiful documentation site in no time.
-
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
-
-[Click here](https://fastn-community.github.io/doc-site/) to read doc-site
-documentation.
-
--- ds.h3: 🚀 Fast Track 
-
-Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
-project in just 5 minutes!
-
--- ds.h3: 🌟 Whats next?
-
-Create your first page. 
-[Click here to know more](https://fastn-community.github.io/doc-site/components/page/).
-
--- ds.h3: 👀 Want to learn more?
-
-Feel free to check [our expander course](https://fastn.com/expander/) or jump
-into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+;;  M A I N   P A G E 
 
 
--- ds.h3: 🎯 Used by?
+-- ftd.row:
+id: main-page
+align-content: center
+height: fill-container
+;; width: fill-
+width.fixed.vw: 100
+max-width: fill-container
+background.solid: #111111
 
-Our all documentation sites uses this `doc-site` theme.
+-- ftd.column:
+align-self: center
+width.fixed.vw: 100
+max-width: fill-container
 
-- [fastn.com](https://fastn.com/home/)
-- [FifthTry.com](https://www.fifthtry.com/)
+;; For making them in a row rather than a column
+-- ftd.row:
+width.fixed.vw: 100 ;; 100vw was too wide thats why given max-width and if we do this, we have to also give the same to all the parent elements
+max-width: fill-container
+spacing: space-evenly
 
--- ds.h2: Learn fastn and become a pro?
 
-You are one click away, just check [our documentation](https://fastn.com/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- button.button: Extra Large Button
+role: primary
+extra-large: true
+link: #
 
--- end: ds.page
+-- button.button: Large Button
+role: primary
+large: true
+link: #
+
+-- button.button: Medium Button
+role: primary
+medium: true
+link: #
+
+-- button.button: Small Button
+role: primary
+small: true
+link: #
+
+
+-- end: ftd.row
+
+-- end: ftd.column
+-- end: ftd.row
+
+
+;; E N D  O F   M A I N   P A G E
+
+
