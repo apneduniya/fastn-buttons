@@ -1,4 +1,26 @@
--- import: fifthtry.github.io/button as button
+-- import: apneduniya.github.io/fastn-buttons/components/button
+
+-- component main:
+boolean $shown: true
+
+;; For making them in a row rather than a column
+-- ftd.column:
+;; width.fixed.vw: 100 ;; 100vw was too wide thats why given max-width and if we do this, we have to also give the same to all the parent elements
+;; max-width: fill-container
+;; spacing: space-evenly
+
+-- ftd.text: Clicked
+if: { $main.shown }
+
+-- button.wrapper: Hello Fastn!
+$click: $main.shown
+;; disabled: true
+;; traditional: true
+
+-- end: ftd.column
+
+-- end: main
+
 
 
 ;;  M A I N   P A G E 
@@ -11,42 +33,14 @@ height: fill-container
 ;; width: fill-
 width.fixed.vw: 100
 max-width: fill-container
-background.solid: #111111
+;; background.solid: #111111
 
 -- ftd.column:
 align-self: center
 width.fixed.vw: 100
 max-width: fill-container
 
-;; For making them in a row rather than a column
--- ftd.row:
-width.fixed.vw: 100 ;; 100vw was too wide thats why given max-width and if we do this, we have to also give the same to all the parent elements
-max-width: fill-container
-spacing: space-evenly
-
-
--- button.button: Extra Large Button
-role: primary
-extra-large: true
-link: #
-
--- button.button: Large Button
-role: primary
-large: true
-link: #
-
--- button.button: Medium Button
-role: primary
-medium: true
-link: #
-
--- button.button: Small Button
-role: primary
-small: true
-link: #
-
-
--- end: ftd.row
+-- main:
 
 -- end: ftd.column
 -- end: ftd.row

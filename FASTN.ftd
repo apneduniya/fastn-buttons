@@ -7,11 +7,13 @@ favicon: /-/apneduniya.github.io/fastn-buttons/favicon.ico
 -- fastn.dependency: fastn-community.github.io/footer
 -- fastn.dependency: fastn-community.github.io/roboto-typography
 
--- fastn.dependency: fifthtry.github.io/button
+;; -- fastn.dependency: fifthtry.github.io/button
 
 -- fastn.auto-import: apneduniya.github.io/fastn-buttons/FASTN/ds
 -- fastn.auto-import: apneduniya.github.io/fastn-buttons/assets
 -- fastn.auto-import: doc-site
+
+;; -- fastn.auto-import: apneduniya.github.io/fastn-buttons/components/button
 
 ;; -- fastn.sitemap:
 

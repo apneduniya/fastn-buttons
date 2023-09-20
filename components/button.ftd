@@ -1,0 +1,89 @@
+
+
+-- component wrapper:
+caption title: ;; done
+optional string role: ;; F U N C T I O N A L I T Y
+optional string link: ;; done
+optional boolean new-tab:  ;; done
+boolean disabled: false 
+boolean traditional: false ;; done
+boolean $click: false ;; done
+optional string color: ;;  S T Y L E S  ;; done
+optional string background: ;; background-color
+optional integer border-width: ;; done
+optional string border-color: ;; done
+
+
+-- ftd.column:
+
+
+;; Main button container (disabled)
+
+-- ftd.row:
+if: { wrapper.disabled }
+background.solid if { wrapper.background != NULL && !wrapper.traditional }: $wrapper.background
+background.solid if { wrapper.traditional }: #efefef4d
+background.solid: #EF8435
+border-width.px if { wrapper.border-width != NULL }: $wrapper.border-width
+border-width.px: 1
+border-color if { wrapper.border-color != NULL }: $wrapper.border-color
+border-color if { wrapper.traditional }: #7676764d
+border-color: #9A9A9A
+border-radius.px: 4
+padding-vertical.px if { wrapper.traditional }: 2
+padding-horizontal.px if { wrapper.traditional }: 6
+padding-vertical.px: 9
+padding-horizontal.px: 18
+overflow: hidden
+cursor: default
+
+-- ftd.text:
+text: $wrapper.title
+color if { wrapper.color != NULL && !wrapper.traditional }: $wrapper.color
+color if { wrapper.traditional }: #1010104d
+color: #ffffff
+
+-- end: ftd.row
+
+
+;; Main button container (not disabled)
+-- ftd.row:
+if: { !wrapper.disabled }
+background.solid if { wrapper.background != NULL && !wrapper.traditional }: $wrapper.background
+background.solid if { wrapper.traditional }: #E5E5E5
+background.solid: #EF8435
+border-width.px if { wrapper.border-width != NULL }: $wrapper.border-width
+border-width.px: 1
+border-color if { wrapper.border-color != NULL }: $wrapper.border-color
+border-color: #9A9A9A
+border-radius.px: 4
+padding-vertical.px if { wrapper.traditional }: 2
+padding-horizontal.px if { wrapper.traditional }: 6
+padding-vertical.px: 9
+padding-horizontal.px: 18
+overflow: hidden
+cursor if { wrapper.disabled }: default
+cursor: pointer
+open-in-new-tab if { wrapper.link != NULL && !wrapper.disabled }: $wrapper.new-tab
+link if { wrapper.link != NULL && !wrapper.disabled }: $wrapper.link
+link if { wrapper.disabled }: #
+link: #
+;; $on-click$: $ftd.set-bool($a = $wrapper.click, v = true)
+$on-click$: $ftd.toggle($a = $wrapper.click)
+;; shadow: $wrapper-shadow
+
+-- ftd.text:
+text: $wrapper.title
+color if { wrapper.color != NULL && !wrapper.traditional }: $wrapper.color
+color if { wrapper.traditional }: #000000
+color: #ffffff
+
+
+-- end: ftd.row
+
+
+-- end: ftd.column
+
+-- end: wrapper
+
+
