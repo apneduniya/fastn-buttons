@@ -34,8 +34,24 @@ padding-vertical.px if { wrapper.traditional }: 2
 padding-horizontal.px if { wrapper.traditional }: 6
 padding-vertical.px: 9
 padding-horizontal.px: 18
+padding-horizontal.px if {wrapper.role == "extra-large" }: 50
+padding-horizontal.px if {wrapper.role == "large" }: 31
+padding-horizontal.px if {wrapper.role == "medium" }: 28
+padding-horizontal.px if {wrapper.role == "small" }: 18
+padding-vertical.px if {wrapper.role == "extra-large" }: 24
+padding-vertical.px if {wrapper.role == "large" }: 16
+padding-vertical.px if {wrapper.role == "medium" }: 8
+padding-vertical.px if {wrapper.role == "small" }: 4
 overflow: hidden
 cursor: default
+height.fixed.px if { wrapper.role == "extra-large" }: 72
+height.fixed.px if { wrapper.role == "large" }: 54
+height.fixed.px if { wrapper.role == "medium" }: 36
+height.fixed.px if { wrapper.role == "small" }: 27
+width.fixed.px if { wrapper.role == "extra-large" }: 200
+width.fixed.px if { wrapper.role == "large" }: 150
+width.fixed.px if { wrapper.role == "medium" }: 100
+width.fixed.px if { wrapper.role == "small" }: 75
 
 -- ftd.text:
 text: $wrapper.title
@@ -61,6 +77,14 @@ padding-vertical.px if { wrapper.traditional }: 2
 padding-horizontal.px if { wrapper.traditional }: 6
 padding-vertical.px: 9
 padding-horizontal.px: 18
+padding-horizontal.px if {wrapper.role == "extra-large" }: 50
+padding-horizontal.px if {wrapper.role == "large" }: 31
+padding-horizontal.px if {wrapper.role == "medium" }: 28
+padding-horizontal.px if {wrapper.role == "small" }: 18
+padding-vertical.px if {wrapper.role == "extra-large" }: 24
+padding-vertical.px if {wrapper.role == "large" }: 16
+padding-vertical.px if {wrapper.role == "medium" }: 8
+padding-vertical.px if {wrapper.role == "small" }: 4
 overflow: hidden
 cursor if { wrapper.disabled }: default
 cursor: pointer
@@ -71,6 +95,14 @@ link: #
 ;; $on-click$: $ftd.set-bool($a = $wrapper.click, v = true)
 $on-click$: $ftd.toggle($a = $wrapper.click)
 ;; shadow: $wrapper-shadow
+height.fixed.px if { wrapper.role == "extra-large" }: 72
+height.fixed.px if { wrapper.role == "large" }: 54
+height.fixed.px if { wrapper.role == "medium" }: 36
+height.fixed.px if { wrapper.role == "small" }: 27
+width.fixed.px if { wrapper.role == "extra-large" }: 200
+width.fixed.px if { wrapper.role == "large" }: 150
+width.fixed.px if { wrapper.role == "medium" }: 100
+width.fixed.px if { wrapper.role == "small" }: 75
 
 -- ftd.text:
 text: $wrapper.title
