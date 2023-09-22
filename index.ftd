@@ -4,20 +4,43 @@
 boolean $shown: true
 
 ;; For making them in a row rather than a column
--- ftd.column:
+-- ftd.row:
 ;; width.fixed.vw: 100 ;; 100vw was too wide thats why given max-width and if we do this, we have to also give the same to all the parent elements
 ;; max-width: fill-container
 ;; spacing: space-evenly
 
--- ftd.text: Clicked
+-- ftd.text: Button is clicked!
 if: { $main.shown }
 
 -- button.wrapper: Hello Fastn!
 $click: $main.shown
 ;; disabled: true
 ;; traditional: true
+role: extra-large
+background: #2DD4BF
 
--- end: ftd.column
+-- button.wrapper: Hello Fastn!
+$click: $main.shown
+;; disabled: true
+;; traditional: true
+role: large
+background: #2DD4BF
+
+-- button.wrapper: Fastn
+$click: $main.shown
+;; disabled: true
+;; traditional: true
+role: medium
+background: #2DD4BF
+
+-- button.wrapper: Fastn
+$click: $main.shown
+;; disabled: true
+;; traditional: true
+role: small
+background: #2DD4BF
+
+-- end: ftd.row
 
 -- end: main
 
